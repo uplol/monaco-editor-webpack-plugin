@@ -29,9 +29,9 @@ featuresArr.forEach(feature => featuresById[feature.label] = feature);
  */
 function resolveMonacoPath(filePath: string): string {
   try {
-    return require.resolve(path.join('monaco-editor/esm', filePath));
+    return require.resolve(path.join('@uplol/monaco-editor/esm', filePath));
   } catch(err) {
-    return require.resolve(path.join(process.cwd(), 'node_modules/monaco-editor/esm', filePath));
+    return require.resolve(path.join(process.cwd(), 'node_modules/@uplol/monaco-editor/esm', filePath));
   }
 }
 
